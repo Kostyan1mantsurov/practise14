@@ -4,8 +4,21 @@ on:
   push:    # Автоматический запуск при любом push
 
 jobs:
+
   print_message:
     runs-on: ubuntu-latest
     steps:
       - name: Вывод сообщения
-        run: echo "Workflow запущен при Git push"
+        run: echo "HELLO WORLD!!!!"
+
+  print_message_number2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Вывод сообщения
+        run: echo "HELLO WORLD!!!!"
+
+  print_message_number3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Вывод сообщения
+        run: echo "HELLO WORLD!!!!"
