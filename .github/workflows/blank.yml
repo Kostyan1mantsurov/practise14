@@ -1,28 +1,11 @@
-# This is a basic workflow to help you get started with Actions
+name: Basic Push Workflow
 
-name: practice_number14
+on:
+  push:    # Автоматический запуск при любом push
 
-# Controls when the workflow will run
-on: repository_dispatch
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-
-
-
-  # Allows you to run this workflow manually from the Actions tab
-
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-   Print_hello:
-    # The type of runner that the job will run on
+  print_message:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-
-      # Runs a single command using the runners shell
-      - name: print HI
-        run: echo "Hello, world!"
-
+      - name: Вывод сообщения
+        run: echo "Workflow запущен при Git push"
